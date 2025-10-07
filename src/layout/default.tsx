@@ -1,14 +1,9 @@
-import { Container } from "@chakra-ui/react"
-
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Container fluid>
-        {children}
-      </Container>
-
+      <div className="min-h-screen bg-gray-100 p-4">{children}</div>
     </>
-  )
-}
+  );
+};
 
 export default DefaultLayout;
