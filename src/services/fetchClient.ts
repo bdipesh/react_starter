@@ -11,10 +11,14 @@ export async function fetchClient(endpoint: string, options: FetchOptions = {}) 
   const { auth = true, headers, ...rest } = options;
   const { token, logout } = useAuthStore.getState(); // access store directly
 
-  const finalHeaders: HeadersInit = {
+  const finalHeaders: Record<string, string> = {
     "Content-Type": "application/json",
-    ...headers,
   };
+
+  // Add custom headers if provided
+  if (headers) {
+    Object.assign(finalHeaders, headers);
+  }
 
   if (auth && token) {
     finalHeaders["Authorization"] = `Bearer ${token}`;

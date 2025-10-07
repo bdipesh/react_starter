@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { fetchClient } from '../services/fetchClient'
 
 interface Task {
   id: number
@@ -21,4 +20,24 @@ export const useTaskStore = create<TaskState>((set) => ({
   tasks: [],
   loading: false,
   error: null,
+  addTask: (title: string) => {
+    const newTask: Task = {
+      id: Date.now(),
+      title,
+      completed: false,
+    };
+    set((state) => ({ tasks: [...state.tasks, newTask] }));
+  },
+  toggleTask: (id: number) => {
+    set((state) => ({
+      tasks: state.tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      ),
+    }));
+  },
+  removeTask: (id: number) => {
+    set((state) => ({
+      tasks: state.tasks.filter((task) => task.id !== id),
+    }));
+  },
 }));
