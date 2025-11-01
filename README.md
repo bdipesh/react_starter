@@ -1,6 +1,6 @@
 # 🚀 React Starter Kit
 
-> A production-ready React starter template with modern tooling and best practices baked in. Clone, configure, and start building your next amazing project in minutes!
+> A production-ready React starter template with modern tooling and best practices baked in. Clone, configure, and start building your next amazing project in minutes! Added a beautifully crafted common component with Zod validation. 
 
 ## ✨ Features
 
