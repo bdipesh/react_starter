@@ -73,7 +73,7 @@ react_starter/
 │   ├── App.tsx          # Main App component
 │   ├── main.tsx         # Application entry point
 │   └── index.css        # Global styles
-├── .eslintrc.cjs        # ESLint configuration
+├── ..eslintrc.cjs        # ESLint configuration
 ├── tsconfig.json        # TypeScript configuration
 ├── vite.config.ts       # Vite configuration
 └── package.json         # Project dependencies and scripts
@@ -89,7 +89,7 @@ The project uses TypeScript with strict mode enabled for better type safety. Con
 
 ### ESLint
 
-ESLint is pre-configured with React-specific rules. Customize rules in `.eslintrc.cjs` to match your team's coding standards.
+ESLint is pre-configured with React-specific rules. Customize rules in `..eslintrc.cjs` to match your team's coding standards.
 
 ### Vite
 
