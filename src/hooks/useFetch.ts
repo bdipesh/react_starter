@@ -1,6 +1,5 @@
 import { fetchClient } from '../services/fetchClient';
-// src/hooks/useFetch.ts
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export function useFetch<T = any>(endpoint: string, deps: any[] = []) {
   const [data, setData] = useState<T | null>(null);
@@ -8,9 +7,9 @@ export function useFetch<T = any>(endpoint: string, deps: any[] = []) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log("Fetching data from:", endpoint);
+    console.log('Fetching data from:', endpoint);
     let ignore = false;
-    if(loading) return;
+    if (loading) return;
     setLoading(true);
 
     fetchClient(endpoint)

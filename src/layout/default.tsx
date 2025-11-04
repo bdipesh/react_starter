@@ -1,7 +1,9 @@
+import Header from '@/components/Common/Header';
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <div className="min-h-screen bg-gray-100 p-4">{children}</div>
+      <Header />
+      <div className="mx-16 min-h-screen  p-4">{children}</div>
     </>
   );
 };
